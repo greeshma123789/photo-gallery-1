@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Photo Gallery</title>
+  <style>
+    /* Reset styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    /* Gallery grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .gallery-item {
+      width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+
+    .lightbox .close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="gallery">
+    <img src=" https://i.imgur.com/LBQe27A.jpeg" alt="Photo 1" class="gallery-item">
+    <img src=" https://i.imgur.com/66saFh9.jpeg" alt="Photo 2" class="gallery-item">
+    <img src=" https://i.imgur.com/x1g3gSp.jpeg" alt="Photo 3" class="gallery-item">
+    <img src=" https://i.imgur.com/pdOYZf3.jpeg" alt="Photo 4" class="gallery-item">
+    <img src=" https://i.imgur.com/34fpnTs.jpeg" alt="Photo 4" class="gallery-item">
+    <img src=" https://i.imgur.com/DrKAB1K.jpeg" alt="Photo 4" class="gallery-item">
+    <img src=" https://i.imgur.com/0g7yVds.jpeg" alt="Photo 4" class="gallery-item">
+    <img src=" https://i.imgur.com/VoLColk.jpeg" alt="Photo 4" class="gallery-item">
+    <img src=" https://i.imgur.com/uZKXWm6.jpeg" alt="Photo 4" class="gallery-item">
+    <img src=" https://i.imgur.com/rl9goLp.jpeg" alt="Photo 4" class="gallery-item">
+    <img src=" https://i.imgur.com/d3kTAHw.jpeg" alt="Photo 4" class="gallery-item">
+    <img src=" https://i.imgur.com/ILGeRBr.jpeg" alt="Photo 4" class="gallery-item">
+    <img src="  https://i.imgur.com/qpHrab3.jpeg" alt="Photo 4" class="gallery-item">
+    <img src="  https://i.imgur.com/rsmB7C1.jpeg" alt="Photo 4" class="gallery-item">
+     <img src=" https://i.imgur.com/PomEUC9.jpeg " alt="Photo 4" class="gallery-item">
+      
+      <img src="  https://i.imgur.com/b7a98SM.jpeg" alt="Photo 4" class="gallery-item">
+      <img src="https://i.imgur.com/xtOGLEy.jpeg " alt="Photo 4" class="gallery-item">
+      <img src=" https://i.imgur.com/B9Gn8t8.jpeg" alt="Photo 4" class="gallery-item">
+      <img src="  https://i.imgur.com/VHbyQSm.jpeg" alt="Photo 4" class="gallery-item">
+      <img src=" https://i.imgur.com/ruRLFMs.jpeg " alt="Photo 4" class="gallery-item">
+      <img src=" https://i.imgur.com/ezSvb4Y.jpeg " alt="Photo 4" class="gallery-item">
+      <img src="  https://i.imgur.com/axiMwwA.jpeg" alt="Photo 4" class="gallery-item">
+      <img src=" https://i.imgur.com/WmNQdci.jpeg " alt="Photo 4" class="gallery-item">
+      <img src=" https://i.imgur.com/kIxLqDa.jpeg " alt="Photo 4" class="gallery-item">
+     <img src=" https://i.imgur.com/tB8PvRS.jpeg " alt="Photo 4" class="gallery-item">
+     <img src="  https://i.imgur.com/6JNFZSI.jpeg" alt="Photo 4" class="gallery-item">
+     <img src=" https://i.imgur.com/CPffYe6.jpeg " alt="Photo 4" class="gallery-item">
+     <img src="https://i.imgur.com/P6v2HFU.jpeg " alt="Photo 4" class="gallery-item">
+     <img src="https://i.imgur.com/EbilhdI.jpeg " alt="Photo 4" class="gallery-item">
+     <img src="https://i.imgur.com/Y7MrGfE.jpeg " alt="Photo 4" class="gallery-item">
+     <img src=" https://i.imgur.com/nrLPQu6.jpeg" alt="Photo 4" class="gallery-item">
+     <img src=" https://i.imgur.com/PhEyg4m.jpeg " alt="Photo 4" class="gallery-item">
+     <img src="https://i.imgur.com/nCHTaDW.jpeg " alt="Photo 4" class="gallery-item">
+     <img src=" https://i.imgur.com/QMiESaZ.jpeg " alt="Photo 4" class="gallery-item">
+     <img src=" https://i.imgur.com/jEs21UA.jpeg " alt="Photo 4" class="gallery-item">
+     <img src="https://i.imgur.com/gpbcFq9.jpeg " alt="Photo 4" class="gallery-item">
+     <img src="  https://i.imgur.com/KqQ3MlO.jpeg" alt="Photo 4" class="gallery-item">
+     <img src=" https://i.imgur.com/34z0Anv.jpeg " alt="Photo 4" class="gallery-item">
+     <img src=" https://i.imgur.com/gQK8jPp.jpeg " alt="Photo 4" class="gallery-item">
+     <img src="https://i.imgur.com/nKxyXKu.jpeg " alt="Photo 4" class="gallery-item">
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" id="close">&times;</span>
+    <img id="lightbox-image" alt="Expanded View">
+  </div>
+
+  <script>
+    // Select elements
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const closeButton = document.getElementById('close');
+
+    // Function to open lightbox
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImage.src = item.src; // Set lightbox image to clicked image
+      });
+    });
+
+    // Function to close lightbox
+    closeButton.addEventListener('click', () => {
+      lightbox.style.display = 'none';		
+    });
+
+    // Close lightbox when clicking outside the image
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImage) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
